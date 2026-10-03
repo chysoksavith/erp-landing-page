@@ -29,6 +29,9 @@ export default function Navbar() {
 
           {/* Nav links */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-base-content/70">
+            <a href="#system-tour" className="hover:text-primary transition-colors">
+              System Tour
+            </a>
             <a href="#features" className="hover:text-primary transition-colors">
               Features
             </a>

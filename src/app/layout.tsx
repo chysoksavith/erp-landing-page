@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import FloatingTelegram from "@/components/FloatingTelegram";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -38,6 +39,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-base-100 text-base-content min-h-screen selection:bg-primary selection:text-white" style={{ fontFamily: "'Plus Jakarta Sans', 'Kantumruy Pro', sans-serif" }}>
         {children}
+        <FloatingTelegram />
       </body>
     </html>
   );

@@ -1,15 +1,16 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="py-16 md:py-24 bg-base-100 border-b border-base-200">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         {/* Simple Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-base-200 text-base-content text-xs font-medium mb-6">
-          <span className="w-2 h-2 rounded-full bg-primary"></span>
-          Enterprise Resource Planning & Attendance System
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-6">
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Enterprise Resource Planning & Automotive Management
         </div>
 
         {/* Heading */}
@@ -19,108 +20,54 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg text-base-content/70 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
-          Manage attendance, leave balances, car dealership inventory, inspections, and POS in one clean system with seamless mobile clock-ins.
+          Manage attendance, leave balances, car dealership inventory, inspections, and POS in one unified system with seamless mobile clock-ins.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
           <a
             href="#contact"
-            className="btn btn-primary btn-md px-6 rounded-lg font-semibold w-full sm:w-auto"
+            className="btn btn-primary btn-md px-6 rounded-lg font-semibold w-full sm:w-auto shadow-sm"
           >
             Get Started
             <i className="fa-solid fa-arrow-right text-xs ml-2"></i>
           </a>
           <a
-            href="#features"
+            href="#system-tour"
             className="btn btn-outline border-base-300 hover:border-base-400 btn-md px-6 rounded-lg font-medium w-full sm:w-auto"
           >
-            View Features
+            Explore System Tour
           </a>
         </div>
 
-        {/* Dashboard Preview - Clean Real App Shell */}
-        <div className="rounded-xl border border-base-300 bg-base-100 shadow-sm overflow-hidden text-left">
+        {/* Dashboard Preview - Real System Screenshot inside macOS-style browser shell */}
+        <div className="rounded-2xl border border-base-300 bg-base-100 shadow-2xl overflow-hidden text-left transition-all hover:shadow-primary/5">
           {/* Topbar bar */}
-          <div className="bg-base-200/70 px-4 py-2.5 border-b border-base-200 flex items-center justify-between text-xs text-base-content/60">
+          <div className="bg-base-200/90 px-4 py-3 border-b border-base-200 flex items-center justify-between text-xs text-base-content/60">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-base-300"></span>
-              <span className="w-2.5 h-2.5 rounded-full bg-base-300"></span>
-              <span className="w-2.5 h-2.5 rounded-full bg-base-300"></span>
+              <span className="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+              <span className="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+              <span className="w-3 h-3 rounded-full bg-[#27c93f]"></span>
             </div>
-            <div className="font-mono text-[11px] bg-base-100 px-3 py-1 rounded border border-base-200">
-              admin.yourapp.com/dashboard
+            <div className="font-mono text-[11px] sm:text-xs bg-base-100 px-4 py-1 rounded-md border border-base-200 text-base-content/70 flex items-center gap-2">
+              <i className="fa-solid fa-lock text-[10px] text-success"></i>
+              <span>admin.yourapp.com/admin</span>
             </div>
-            <div>
-              <span className="badge badge-primary badge-xs">v3.0</span>
+            <div className="flex items-center gap-2">
+              <span className="badge badge-primary badge-sm font-semibold">Live System</span>
             </div>
           </div>
 
-          {/* Clean Dashboard Stats */}
-          <div className="p-6 bg-base-200/20">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div className="bg-base-100 p-4 rounded-lg border border-base-200">
-                <div className="text-xs font-medium text-base-content/60">Total Sales</div>
-                <div className="text-xl font-bold mt-1 text-base-content">$148,290.00</div>
-                <div className="text-[11px] text-success mt-1 font-medium">+18% this month</div>
-              </div>
-
-              <div className="bg-base-100 p-4 rounded-lg border border-base-200">
-                <div className="text-xs font-medium text-base-content/60">Employees On Duty</div>
-                <div className="text-xl font-bold mt-1 text-primary">82 / 85</div>
-                <div className="text-[11px] text-base-content/50 mt-1">96.8% attendance rate</div>
-              </div>
-
-              <div className="bg-base-100 p-4 rounded-lg border border-base-200">
-                <div className="text-xs font-medium text-base-content/60">Available Inventory</div>
-                <div className="text-xl font-bold mt-1 text-base-content">42 Cars</div>
-                <div className="text-[11px] text-base-content/50 mt-1">6 containers in transit</div>
-              </div>
-
-              <div className="bg-base-100 p-4 rounded-lg border border-base-200">
-                <div className="text-xs font-medium text-base-content/60">Pending Leave</div>
-                <div className="text-xl font-bold mt-1 text-warning">3 Requests</div>
-                <div className="text-[11px] text-base-content/50 mt-1">Awaiting review</div>
-              </div>
-            </div>
-
-            {/* Table */}
-            <div className="bg-base-100 rounded-lg border border-base-200 overflow-x-auto">
-              <table className="table table-sm w-full">
-                <thead>
-                  <tr className="border-b border-base-200 text-base-content/60 font-medium">
-                    <th>Employee / Item</th>
-                    <th>Module</th>
-                    <th>Location</th>
-                    <th>Time</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody className="text-xs">
-                  <tr className="border-b border-base-200/60">
-                    <td className="font-semibold text-base-content">Sokha Kim</td>
-                    <td>Attendance</td>
-                    <td>Phnom Penh HQ</td>
-                    <td>08:02 AM</td>
-                    <td><span className="badge badge-success badge-xs font-medium">Clocked In</span></td>
-                  </tr>
-                  <tr className="border-b border-base-200/60">
-                    <td className="font-semibold text-base-content">Lexus RX350 (2024)</td>
-                    <td>Sale Letter</td>
-                    <td>Sen Sok Showroom</td>
-                    <td>Yesterday</td>
-                    <td><span className="badge badge-primary badge-xs font-medium">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td className="font-semibold text-base-content">Dara Vong</td>
-                    <td>Leave Request</td>
-                    <td>Siem Reap Branch</td>
-                    <td>Sep 10 - 11</td>
-                    <td><span className="badge badge-warning badge-xs font-medium">Pending</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          {/* Real System Image */}
+          <div className="relative w-full aspect-[16/10] bg-base-200">
+            <Image
+              src="/screenshots/admin_dashboard.png"
+              alt="OmniERP Executive Dashboard"
+              fill
+              priority
+              className="object-cover object-top"
+              sizes="(max-width: 1200px) 100vw, 1200px"
+            />
           </div>
         </div>
       </div>

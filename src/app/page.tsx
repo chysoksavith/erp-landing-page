@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import SystemShowcase from "@/components/SystemShowcase";
 import Features from "@/components/Features";
 import MobileAppShowcase from "@/components/MobileAppShowcase";
 import Pricing from "@/components/Pricing";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-base-100 flex flex-col">
       <Navbar />
       <Hero />
+      <SystemShowcase />
       <Features />
       <MobileAppShowcase />
       <Pricing />
